@@ -170,7 +170,7 @@ trait Commands {
     CommandSequence(head, snd, rest: _*)
 
   /** A command that runs a sequence of other commands */
-  private final case class CommandSequence(
+  private case class CommandSequence(
     head: Command, snd: Command, rest: Command*
   ) extends SuccessCommand {
     /* The tail of the command sequence */
